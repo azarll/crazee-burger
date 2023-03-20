@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   // state
   const [inputValue, setInputValue] = useState("");
-  
+
   //  action
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,7 +16,7 @@ export default function LoginForm() {
     setInputValue(event.target.value);
   };
 
-//   render
+  //   render
   return (
     <form action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
@@ -29,6 +30,7 @@ export default function LoginForm() {
         required
       />
       <button>Accédez à votre espace</button>
+      <Link to="/order">Vers OrderPage</Link>
     </form>
   );
 }
