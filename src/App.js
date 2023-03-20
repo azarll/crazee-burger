@@ -1,11 +1,7 @@
-import { useState } from 'react';
+import LoginPage from "./Components/pages/LoginPage";
+
 function App() {
-  // state
-
-  // action
-
-  // render
-
+  return <LoginPage />;
 }
 
 export default App;
