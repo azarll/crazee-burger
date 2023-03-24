@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { BsPersonCircle } from "react-icons/bs";
+import { IoChevronForward } from "react-icons/io5";
 
 export default function LoginForm() {
   // state
@@ -26,25 +27,28 @@ export default function LoginForm() {
         <hr />
         <h2>Connectez-vous</h2>
       </div>
-      <div className="input-with-icon">
-        <BsPersonCircle className="icon" />
-        <input
-          value={inputValue}
-          onChange={handleChange}
-          type="text"
-          placeholder="Entrez votre prénom..."
-          required
-        />
-      </div>
       <div>
-        <button>Accédez à votre espace</button>
+        <div className="input-with-icon">
+          <BsPersonCircle className="icon" />
+          <input
+            value={inputValue}
+            onChange={handleChange}
+            type="text"
+            placeholder="Entrez votre prénom..."
+            required
+          />
+        </div>
+
+        <button className="button-with-icon">
+          <span>Accéder à mon espace</span>
+          <IoChevronForward className="icon" />
+        </button>
       </div>
     </LoginFormStyled>
   );
 }
 
 const LoginFormStyled = styled.div`
-  background: green;
   text-align: center;
   max-width: 500px;
   min-width: 400px;
@@ -77,28 +81,73 @@ const LoginFormStyled = styled.div`
     display: flex;
     align-items: center;
     padding: 18px 24px;
-    margin: 18px 0; // could be handle in Parent too 
+    margin: 18px 0; // could be handle in Parent too
     /* white-space: nowrap; */
 
-      .icon {
-        font-size: 15px;
-        margin-right: 8px;
-        color: #93a2b1;
-        /* min-width: 1em; // that way, the icon size is NOT affected */
-      }
+    .icon {
+      font-size: 15px;
+      margin-right: 8px;
+      color: #93a2b1;
+      /* min-width: 1em; // that way, the icon size is NOT affected */
+    }
 
-      input {
-        border: none;
-        font-size: 15px;
-        color: #17161a;
-        /* width: 100%; */
-        /* display: flex; */
-      }
+    input {
+      border: none;
+      font-size: 15px;
+      color: #17161a;
+      /* width: 100%; */
+      /* display: flex; */
+    }
 
-      &::placeholder {
-        background: white;
-        color: lightgrey;
-      }
+    &::placeholder {
+      background: white;
+      color: lightgrey;
+    }
+  }
+
+  .button-with-icon {
+    width: 100%;
+    border: 1px solid red;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
+
+    padding: 18px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: #ff9f1b;
+    border: 1px solid #ff9f1b;
+  
+    &:hover:not(:disabled) {
+      background-color: white;
+      color: #ff9f1b;
+      border: 1px solid #ff9f1b;
+      transition: all 200ms ease-out;
+    }
+
+    &:active {
+      color: white;
+      background-color: #ff9f1b;
+      border: 1px solid #ff9f1b;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      margin-left: 10px;
+    }
   }
 
 `;
