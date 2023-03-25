@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
-export default function Input({
-  value,
-  handleChange,
-  Icon,
-    ...extraProps
-}) {
+export default function TextInput({ value, handleChange, Icon, ...extraProps }) {
   return (
     <InputStyled>
       {Icon}
