@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 export default function PrimaryButton({ label, Icon, ...extraProps }) {
   return (
@@ -21,23 +22,23 @@ const PrimaryButtonStyled = styled.button`
   line-height: 1;
 
   padding: 18px 24px;
-  border-radius: 5px;
-  font-size: 15px;
-  color: white;
-  background-color: #ff9f1b;
-  border: 1px solid #ff9f1b;
+  border-radius: ${theme.borderRadius.round};
+  font-size: ${theme.fonts.P0};
+  color: ${theme.colors.white};
+  background-color: ${theme.colors.loginButton};
+  border: 1px solid ${theme.colors.loginButton};
 
   &:hover:not(:disabled) {
-    background-color: white;
-    color: #ff9f1b;
-    border: 1px solid #ff9f1b;
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.loginButton};
+    border: 1px solid ${theme.colors.loginButton};
     transition: all 200ms ease-out;
   }
 
   &:active {
-    color: white;
-    background-color: #ff9f1b;
-    border: 1px solid #ff9f1b;
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.loginButton};
+    border: 1px solid ${theme.colors.loginButton};
   }
 
   &:disabled {
