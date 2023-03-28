@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NavbarRightSide from "./NavbarRightSide";
 import Logo from "../../reusable-ui/Logo";
@@ -18,7 +17,4 @@ const NavbarStyled = styled.nav`
   justify-content: space-between;
   padding:0 20px;
 
-  .right-side {
-    background: pink;
-  }
 `;
