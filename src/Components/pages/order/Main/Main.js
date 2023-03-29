@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { theme } from "../../../theme";
+import { theme } from "../../../../theme";
 
 export default function Main() {
   return (
     <MainStyled>
-      {" "}
       <div className="basket">basket</div>
       <div className="menu">menu</div>
     </MainStyled>
