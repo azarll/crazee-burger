@@ -22,8 +22,7 @@ const NavbarStyled = styled.nav`
 
   border-top-left-radius: ${theme.borderRadius.extraRound};
   border-top-right-radius: ${theme.borderRadius.extraRound};
-
-  .logo-order-page {
+  border-bottom: 1px solid ${theme.colors.greyLight} .logo-order-page {
     cursor: pointer;
   }
 `;
