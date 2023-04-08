@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme";
-import Main from "./Main/Main";
 import Navbar from "./Navbar/Navbar";
-
+import Main from "./Main/Main";
 
 
 
@@ -18,7 +17,7 @@ export default function OrderPage() {
     <OrderPageStyled>
       <div className="container">
         <Navbar username={username} />
-        <Main />
+        <Main/>
       </div>
     </OrderPageStyled>
   );
