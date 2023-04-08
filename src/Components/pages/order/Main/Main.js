@@ -4,7 +4,7 @@ import Menu from "./Menu";
 
 export default function Main() {
   return (
-    <MainStyled>
+    <MainStyled className="main">
       {/* <div className="basket">basket</div> */}
       <Menu />
     </MainStyled>
@@ -23,10 +23,7 @@ const MainStyled = styled.div`
   grid-template-columns: 1fr;
 
   overflow-y: scroll;
-
   /* basket {
     background: pink;
   } */
-
-
 `;
